@@ -1,0 +1,5 @@
+sceneSetups:
+- path: C:/Users/28552/Desktop/Ex_Files_Unity5_Game/Exercise Files/Chapter 1/01/Unity
+    3D RTS/Assets/Scenes/RTS Map.unity
+  isLoaded: 1
+  isActive: 1
