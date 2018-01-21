@@ -7,6 +7,18 @@ public class RtsManager : MonoBehaviour {
     public static RtsManager Current = null;
 
     public List<PlayerSetupDefinition> Players = new List<PlayerSetupDefinition>();
+
+    public TerrainCollider MapCollider;
+
+    public Vector3? ScreenPointToMapPosition(Vector2 point)
+    {
+        var ray = Camera.main.ScreenPointToRay(point);
+        RaycastHit hit;
+        if (!MapCollider.Raycast(ray, out hit, Mathf.Infinity))
+            return null;
+
+        return hit.point;
+    }
 	// Use this for initialization
 	void Start () {
         Current = this;
@@ -14,7 +26,11 @@ public class RtsManager : MonoBehaviour {
         {
             foreach(var u in p.StartingUnits)
             {
-                GameObject.Instantiate(u, p.Location.position, p.Location.rotation);
+              var go =  (GameObject)GameObject.Instantiate(u, p.Location.position, p.Location.rotation);
+                if(!p.IsAi)
+                {
+                    go.AddComponent<RightClickNavigation>();
+                }
             }
         }
 	} 
