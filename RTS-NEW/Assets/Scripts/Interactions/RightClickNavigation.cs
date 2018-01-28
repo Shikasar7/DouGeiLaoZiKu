@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 
 public class RightClickNavigation : Interaction {
 
 	public float RelaxDistance = 5;//告诉单位到目的地后留在一个范围就好了，不用挤在一起
 
-    private UnityEngine.AI.NavMeshAgent agent;
+    private NavMeshAgent agent;
 	private Vector3 target = Vector3.zero;
 	private bool selected = false;
 	private bool isActive = false;
@@ -18,11 +19,7 @@ public class RightClickNavigation : Interaction {
 	{
 		selected = true;
 	}
-	public void SendToTarget(Vector3 pos)
-	{
-		target = pos;
-		SendToTarget ();
-	}
+
 	public void SendToTarget()
 	{
 		agent.SetDestination (target);
@@ -31,7 +28,7 @@ public class RightClickNavigation : Interaction {
 	}
 	// Use this for initialization
 	void Start () {
-		agent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
+		agent = GetComponent<NavMeshAgent> ();
 	}	
 	// Update is called once per frame
 	void Update () {

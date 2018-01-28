@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class MouseManager : MonoBehaviour {
 
+
 	public static MouseManager Current;
 
 	public MouseManager()
