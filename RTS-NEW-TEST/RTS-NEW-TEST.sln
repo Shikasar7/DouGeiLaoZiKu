@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTS-NEW-TEST", "RTS-NEW-TEST.csproj", "{126D1396-49A5-929D-EB24-B1D480FF2C69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTS-NEW-TEST.Plugins", "RTS-NEW-TEST.Plugins.csproj", "{4466A644-A8F3-F1EE-F513-9D3AAA7F61D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTS-NEW-TEST.Editor.Plugins", "RTS-NEW-TEST.Editor.Plugins.csproj", "{995A5664-6AFA-106F-5B56-8F73118668C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{126D1396-49A5-929D-EB24-B1D480FF2C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{126D1396-49A5-929D-EB24-B1D480FF2C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{126D1396-49A5-929D-EB24-B1D480FF2C69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4466A644-A8F3-F1EE-F513-9D3AAA7F61D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4466A644-A8F3-F1EE-F513-9D3AAA7F61D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4466A644-A8F3-F1EE-F513-9D3AAA7F61D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4466A644-A8F3-F1EE-F513-9D3AAA7F61D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995A5664-6AFA-106F-5B56-8F73118668C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995A5664-6AFA-106F-5B56-8F73118668C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995A5664-6AFA-106F-5B56-8F73118668C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995A5664-6AFA-106F-5B56-8F73118668C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
