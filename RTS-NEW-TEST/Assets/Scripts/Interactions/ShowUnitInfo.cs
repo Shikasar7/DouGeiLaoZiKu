@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class ShowUnitInfo : Interaction  {
-
-   
+public class ShowUnitInfo : Interaction {
+    //可调用  
     public string Name;
     public float MaxHealth, CurrentHealth;
     public Sprite ProfilePic;
+    //各种显示的信息
     bool show = false;
+    //默认关闭显示
 
     public override void Select()
     {

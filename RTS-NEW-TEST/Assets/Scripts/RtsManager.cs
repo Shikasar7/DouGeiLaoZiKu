@@ -8,15 +8,20 @@ public class RtsManager : MonoBehaviour {
     public static RtsManager Current = null;
 
     public List<PlayerSetupDefinition> Players = new List<PlayerSetupDefinition>();
+    //调用playersetup里的泛型集合 
 
     public TerrainCollider MapCollider;
+    //地形
 
     public Vector3? ScreenPointToMapPosition(Vector2 point)
     {
         var ray = Camera.main.ScreenPointToRay(point);
         RaycastHit hit;
+        //用射线检测是否碰到物体
+
         if (!MapCollider.Raycast(ray, out hit, Mathf.Infinity))
             return null;
+        //判断得到有效的hit
 
         return hit.point;
     }
@@ -50,6 +55,10 @@ public class RtsManager : MonoBehaviour {
         return true;
     }
 
+    public RtsManager()
+    {
+        Current = this;
+    }
  
     // Use this for initialization
 	void Start () {
@@ -60,6 +69,7 @@ public class RtsManager : MonoBehaviour {
             {
               var go =  (GameObject)GameObject.Instantiate(u, p.Location.position, p.Location.rotation);
               var player = go.AddComponent<Player>();
+                //获取player信息
                 player.Info = p;
                 if (!p.IsAi)
                 {

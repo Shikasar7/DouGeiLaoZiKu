@@ -7,6 +7,8 @@ public class MarkColor : MonoBehaviour {
     void Start()
     {
         var color = GetComponent<Player>().Info.AccentColor;
+        //从Player中获取颜色
+
         foreach (var r in Renderers)
         {
             r.material.color = color;

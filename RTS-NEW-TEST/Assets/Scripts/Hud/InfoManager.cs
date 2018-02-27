@@ -7,6 +7,8 @@ public class InfoManager : MonoBehaviour {
     public static InfoManager Current;
     public Image profilepic;
     public Text Line1, Line2, Line3;
+   //三行文本面板
+
     public InfoManager ()
     {
         Current = this;
@@ -16,16 +18,19 @@ public class InfoManager : MonoBehaviour {
         Line1.text = line1;
         Line2.text = line2;
         Line3.text = line3;
+        //创建文本
     }
     public void ClearLines()
     {
         SetLines("", "", "");
+        //清除文本为空格
     }
     public void Setpic(Sprite pic)
     {
+        //头像
         profilepic.sprite = pic;
         profilepic.color = Color.white;
-        
+        //为确保能看见 把图片变成白色
     }
     public void Clearpic()
     {
@@ -36,11 +41,8 @@ public class InfoManager : MonoBehaviour {
 	void Start () {
         ClearLines();
         Clearpic();
-		
+	   //清除图片和文本	
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 }
