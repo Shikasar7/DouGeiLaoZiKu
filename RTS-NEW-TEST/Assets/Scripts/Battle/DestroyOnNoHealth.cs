@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyOnNoHealth : MonoBehaviour {
 
+    public GameObject ExplosionPrefab;
     private ShowUnitInfo info;
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,8 @@ public class DestroyOnNoHealth : MonoBehaviour {
 		if(info.CurrentHealth <= 0)
         {
             Destroy(this.gameObject);
+            GameObject.Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
+
         }
 	}
 }
